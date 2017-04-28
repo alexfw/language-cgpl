@@ -22,16 +22,7 @@
         'match': '\\b(?:(?:and)|(?:elif)|(?:else)|(?:end)|(?:exitif)|
             (?:external)|(?:false)|(?:forward)|(?:for)|(?:if)|(?:is)|(?:loop)|
             (?:not)|(?:null)|(?:or)|(?:return)|(?:spawn)|(?:stop)|
-            (?:then)|(?:true)|(?:while)|(?:xor)|(?:var))\\b'
-    }
-    {
-        'match': '\\b((:?function)|(:?procedure)|(:?entry))\\s+([\\w\:\_\d]+)\\s*\\(.*\\)\\s*(:?(:?\{)|(:?is)|(:?external\;)|(:?forward\;))'
-        'captures':
-            '1':
-                'name': 'keyword.control.cgpl'
-            '2':
-                'name': 'entity.name.function.cgpl'
-                'name': 'meta.function.cgpl'
+            (?:then)|(?:true)|(?:while)|(?:xor)|(?:var)|(?:function)|(?:procedure)|(?:entry))\\b'
     }
     {
         'name': 'keyword.control.builtin.cgpl'
@@ -61,7 +52,7 @@
         (?:[gG][mM][tT][tT]o[lL]ocal)|(?:[hH][tT][tT][pP][cC]all)|(?:[iI]mpersonate)|\
         (?:[iI]ncoming[rR]equest[uU][rR][iI])|(?:[iI]nsert[eE]lement)|(?:[iI]nvert)|\
         (?:[iI][pP][aA]ddress)|(?:[iI]s[aA]rray)|(?:[iI]s[bB]reak[bB]ridge[eE]vent)|\
-        (?:[iI]s[cC]all[cC]omplet[eE]devent)|(?:[iI]s[cC]all[iI]nfo[eE]vent)|\
+        (?:[iI]s[cC]all[cC]ompleted[eE]vent)|(?:[iI]s[cC]all[iI]nfo[eE]vent)|\
         (?:[iI]s[cC]all[pP]rovision[eE]vent)|(?:[iI]s[cC]all[tT]ransferred[eE]vent)|\
         (?:[iI]s[cC]onnected)|(?:[iI]s[dD]ata)|(?:[iI]s[dD]ate)|(?:[iI]s[dD]ictionary)|\
         (?:[iI]s[dD]igit)|(?:[iI]sdis[cC]onnect[eE]vent)|(?:[iI]s[hH]alf[cC]onnected)|\
