@@ -1,0 +1,11 @@
+{
+  "name": "language-cgpl",
+  "version": "0.0.1",
+  "description": "Syntax highlighting, of CG/PL language, for Atom",
+  "repository": "https://github.com/alexfw/language-cgpl",
+  "license": "MIT",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  }
+}

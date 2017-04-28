@@ -1,0 +1,147 @@
+'name': 'CG/PL'
+'scopeName': 'source.cgpl'
+'fileTypes': [
+  'sppi', 'sppr', 'wcgi', 'wcgp'
+]
+'patterns': [
+    {
+        'name':'comment.line.double-slash.cgpl'
+        'match':'//.*[$\\n]?'
+    }
+    {
+        'name': 'comment.block.cgpl'
+        'begin': '/\\*'
+        'end': '\\*/'
+    }
+    {
+        'match': '\\b([0-9]+)\\b'
+        'name': 'constant.numeric.cgpl'
+    }
+    {
+        'name': 'keyword.control.cgpl'
+        'match': '\\b(?:(?:and)|(?:elif)|(?:else)|(?:end)|(?:exitif)|
+            (?:external)|(?:false)|(?:forward)|(?:for)|(?:if)|(?:is)|(?:loop)|
+            (?:not)|(?:null)|(?:or)|(?:return)|(?:spawn)|(?:stop)|
+            (?:then)|(?:true)|(?:while)|(?:xor)|(?:var))\\b'
+    }
+    {
+        'match': '\\b((:?function)|(:?procedure)|(:?entry))\\s+([\\w\:\_\d]+)\\s*\\(.*\\)\\s*(:?(:?\{)|(:?is)|(:?external\;)|(:?forward\;))'
+        'captures':
+            '1':
+                'name': 'keyword.control.cgpl'
+            '2':
+                'name': 'entity.name.function.cgpl'
+                'name': 'meta.function.cgpl'
+    }
+    {
+        'name': 'keyword.control.builtin.cgpl'
+        'match': '\\b(?:(?:[aA]ccept[bB]ridge)|(?:[aA]ccept[cC]all)|(?:[aA]ccept[tT]ransfer)|\
+        (?:[aA]ctivate[mM]eeting)|(?:[aA]dd[eE]lement)|(?:[aA]ppend[sS]ite[fF]ile)|\
+        (?:[aA]ppend[sS]torage[fF]ile)|(?:[aA]pp[tT]o[xX]ml)|(?:[aA]ttachmixer)|\
+        (?:[bB]anner[rR]ead)|(?:[bB]ase64[dD]ecode)|(?:[bB]ase64[eE]ncode)|\
+        (?:[bB]reak[bB]ridge)|(?:[cC]ancel[cC]all)|(?:[cC]heck[qQ]ueue)|\
+        (?:[cC]lear[dD][tT][mM][fF])|(?:[cC]lear[mM]eeting)|(?:[cC]onvert)|\
+        (?:[cC]opy)|(?:[cC]reate[mM]eeting)|(?:[cC]reate[sS]torage[dD]irectory)|\
+        (?:[cC][rR][lL][fF])|(?:[cC]ry[dD]e[cC]rypt)|(?:[cC]ry[dD]igest)|\
+        (?:[cC]ry[eE]n[cC]rypt)|(?:[dD]ata[sS]et[cC]reate)|(?:[dD]ata[sS]et[dD]elete)|\
+        (?:[dD]ata[sS]et[lL]ist)|(?:[dD]ata[sS]et[rR]emove)|(?:[dD]ata[sS]et[sS]et)|\
+        (?:[dD]ate[bB]y[mM]onth[dD]ay)|(?:[dD]ate[bB]y[yY]ear[dD]ay)|(?:[dD]ate[nN]umber)|\
+        (?:[dD]eactivate[mM]eeting)|(?:[dD]elete[sS]ite[fF]ile)|\
+        (?:[dD]elete[sS]torage[dD]irectory)|(?:[dD]elete[sS]torage[fF]ile)|\
+        (?:[dD]e[qQ]ueue)|(?:[dD]etach[mM]ixer)|(?:[dD]irectory[sS]earch)|\
+        (?:[dD]isconnect)|(?:[dD]o[bB]alance)|(?:[dD][tT][mM][fF])|\
+        (?:[eE]mail[dD]omain[pP]art)|(?:[eE]mail[tT]o[sS][iI][pP][uU][rR][iI])|\
+        (?:[eE]mail[uU]ser[pP]art)|(?:[eE]n[qQ]ueue)|(?:[eE][oO][lL])|(?:[fF]ind)|\
+        (?:[fF]ind[mM]eeting)|(?:[fF]ind[rR]egex)|(?:[fF]ind[sS]ub[sS]tring)|\
+        (?:[fF]ork[cC]all)|(?:[fF]unc[cC]all)|(?:[gG]et[aA]ccount[pP]references)|\
+        (?:[gG]et[aA]ttribute)|(?:[gG]et[lL]anguage)|(?:[gG]et[mM]ail[bB]ox[aA][cC][lL][sS])|\
+        (?:[gG]et[mM]ail[bB]ox[aA]liases)|(?:[gG]et[mM]ail[bB]ox[sS]ubscription)|\
+        (?:[gG]et[mM]essage[aA]ttr)|(?:[gG]et[nN]ame[sS]pace)|(?:[gG]et[pP]refix)|\
+        (?:[gG]et[tT]ime[zZ]one[nN]ame)|(?:[gG][mM][tT][tT]ime)|\
+        (?:[gG][mM][tT][tT]o[lL]ocal)|(?:[hH][tT][tT][pP][cC]all)|(?:[iI]mpersonate)|\
+        (?:[iI]ncoming[rR]equest[uU][rR][iI])|(?:[iI]nsert[eE]lement)|(?:[iI]nvert)|\
+        (?:[iI][pP][aA]ddress)|(?:[iI]s[aA]rray)|(?:[iI]s[bB]reak[bB]ridge[eE]vent)|\
+        (?:[iI]s[cC]all[cC]omplet[eE]devent)|(?:[iI]s[cC]all[iI]nfo[eE]vent)|\
+        (?:[iI]s[cC]all[pP]rovision[eE]vent)|(?:[iI]s[cC]all[tT]ransferred[eE]vent)|\
+        (?:[iI]s[cC]onnected)|(?:[iI]s[dD]ata)|(?:[iI]s[dD]ate)|(?:[iI]s[dD]ictionary)|\
+        (?:[iI]s[dD]igit)|(?:[iI]sdis[cC]onnect[eE]vent)|(?:[iI]s[hH]alf[cC]onnected)|\
+        (?:[iI]s[iI]nstant[mM]essage[eE]vent)|(?:[iI]s[iI]p[aA]ddress)|\
+        (?:[iI]s[mM]ail[bB]ox[nN]otify[eE]vent)|(?:[iI]s[nN]umber)|\
+        (?:[iI]s[sS]tart[bB]ridge[eE]vent)|(?:[iI]s[sS]tart[tT]ransfer[eE]vent)|\
+        (?:[iI]s[sS]tring)|(?:[iI]s[wW]hite[sS]paces)|(?:[iI]s[xX][mM][lL])|\
+        (?:[iI]s[xX][mM][pP][pP][iI][qQ][eE]vent)|(?:[jJ][sS][oO][nN][tT]o[oO]bject)|\
+        (?:[lL]ength)|(?:[lL]ist[sS]ite[fF]iles)|(?:[lL]ist[sS]torage[fF]iles)|\
+        (?:[lL]ocal[tT]ime)|(?:[lL]ocal[tT]o[gG][mM][tT])|(?:[lL]ocal[uU][rR][iI])|\
+        (?:[lL]ock[sS]torage[fF]ile)|(?:[mM]ail[bB]ox[aA]ppend)|\
+        (?:[mM]ail[bB]ox[aA]udio[bB]y[uU][iI][dD])|(?:[mM]ail[bB]ox[cC]opy)|\
+        (?:[mM]ail[bB]ox[eE]xpunge)|(?:[mM]ail[bB]ox[fF]lags[bB]y[uU][iI][dD])|\
+        (?:[mM]ail[bB]ox[fF]orward[bB]y[uU][iI][dD])|\
+        (?:[mM]ail[bB]ox[iI]nternal[tT]ime[bB]y[uU][iI][dD])|\
+        (?:[mM]ail[bB]ox[oO]rig[uU][iI][dD][bB]y[uU][iI][dD])|\
+        (?:[mM]ail[bB]ox[rR]edirect[bB]y[uU][iI][dD])|(?:[mM]ail[bB]ox[sS]et[fF]lags)|\
+        (?:[mM]ail[bB]ox[sS]et[fF]lags[bB]y[uU][iI][dD])|\
+        (?:[mM]ail[bB]ox[uU][iI][dD][bB]y[oO]rig[uU][iI][dD])|\
+        (?:[mM]ail[bB]ox[uU][iI][dD]s)|(?:[mM]ax)|(?:[mM]edia[oO]ption)|\
+        (?:[mM]in)|(?:[mM]ixer[aA]ttached)|(?:[mM]onth)|(?:[mM]onth[dD]ay)|\
+        (?:[mM]onth[nN]um)|(?:[mM]ute[mM]ixer)|(?:[mM]y[dD]omain)|\
+        (?:[mM]y[eE]mail)|(?:[nN]ew[aA]rray)|(?:[nN]ew[dD]ictionary)|\
+        (?:[nN]ew[xX][mM][lL])|(?:[nN]umber)|(?:[oO]bject[cC]lass)|(?:[oO]bject[tT]o[jJ][sS][oO][nN])|\
+        (?:[oO]bject[tT]o[sS]tring)|(?:[oO]bject[tT]o[xX][mM][lL])|(?:[oO]pen[cC]alendar)|\
+        (?:[oO]pen[mM]ail[bB]ox)|(?:[pP]ending[rR]equest[dD]ata)|(?:[pP]ending[rR]equest[eE]x[dD]ata)|\
+        (?:[pP]hone[nN]umber[tT]o[sS][iI][pP][uU][rR][iI])|(?:[pP]lay)|(?:[pP]lay[fF]ile)|\
+        (?:[pP]lay[fF]ile[iI]n[lL]oop)|(?:[pP]lay[iI]n[lL]oop)|(?:[pP]roc[cC]all)|(?:[pP]rocess[cC]alendar)|\
+        (?:[pP]rovision[cC]all)|(?:[rR]adius[cC]all)|(?:[rR]andom[dD]ata)|(?:[rR]andom[nN]umber)|\
+        (?:[rR]ange)|(?:[rR]ead[eE]nvir[fF]ile)|(?:[rR]ead[gG]roup[mM]embers)|(?:[rR]ead[iI]nput)|\
+        (?:[rR]ead[qQ]ueue)|(?:[rR]ead[rR]oster)|(?:[rR]ead[sS]ite[fF]ile)|(?:[rR]ead[sS]torage[fF]ile)|\
+        (?:[rR]ead[sS]torage[fF]ile[aA]ttr)|(?:[rR]ead[tT]elnums)|(?:[rR]ecord)|(?:[rR]edirect[cC]all)|\
+        (?:[rR]eject[bB]ridge)|(?:[rR]eject[cC]all)|(?:[rR]eject[tT]ransfer)|(?:[rR]elease[mM]edia[cC]hannel)|\
+        (?:[rR]emote[aA]uthentication)|(?:[rR]emote[iI][pP][aA]ddress)|(?:[rR]emote[uU][rR][iI])|\
+        (?:[rR]emove[eE]lement)|(?:[rR]emove[mM]eeting)|(?:[rR]ename[sS]ite[fF]ile)|\
+        (?:[rR]ename[sS]torage[dD]irectory)|(?:[rR]ename[sS]torage[fF]ile)|(?:[rR]oute[aA]ddress)|\
+        (?:[rR]oute[eE]num)|(?:[rR]oute[lL]ocal[uU][rR][iI])|(?:[sS]ame)|(?:[sS]end[cC]all[iI]nfo)|\
+        (?:[sS]end[cC]all[nN]otify)|(?:[sS]end[cC]all[oO]ptions)|(?:[sS]end[cC]all[rR]egister)|\
+        (?:[sS]end[dD][tT][mM][fF])|(?:[sS]end[eE]mail)|(?:[sS]end[eE]vent)|\
+        (?:[sS]end[iI]nstant[mM]essage)|(?:[sS]end[xX][mM][pP][pP][iI][qQ])|\
+        (?:[sS]et[aA]ccount[pP]references)|(?:[sS]et[aA]pplication[sS]tatus)|(?:[sS]et[aA]ttribute)|\
+        (?:[sS]et[bB]ridge[bB]reak[mM]ode)|(?:[sS]et[bB]ridged[pP]rovision)|\
+        (?:[sS]et[cC]all[pP]arameters)|(?:[sS]et[cC]ase[sS]ensitive)|(?:[sS]et[fF]oreign[cC]redentials)|\
+        (?:[sS]et[iI]nterrupt[oO]n[dD][tT][mM][fF])|(?:[sS]et[lL]anguage)|\
+        (?:[sS]et[lL]ocal[cC]ontact[pP]arameter)|(?:[sS]et[lL]ocal[hH]old)|\
+        (?:[sS]et[mM]ail[bB]ox[aA][cC][lL]s)|(?:[sS]et[mM]ailbox[aA]liases)|\
+        (?:[sS]et[mM]ailbox[sS]ubscription)|(?:[sS]et[nN]ame[sS]pace)|\
+        (?:[sS]et[pP]rovision[cC]ode)|(?:[sS]et[rR]efer[mM]ode)|\
+        (?:[sS]et[rR]oster)|(?:[sS]et[tT]ime[zZ]one)|(?:[sS]et[tT]ransfer[rR]eport[mM]ode)|\
+        (?:[sS]ignal[oO]ption)|(?:[sS][iI][pP][uU][rR][iI][tT]o[eE]mail)|\
+        (?:[sS]ort[sS]trings)|(?:[sS]tart[bB]ridge)|(?:[sS]tart[bB]ridged[cC]all)|\
+        (?:[sS]tart[cC]all)|(?:[sS]tart[tT]ransfer)|(?:[sS]tatistics)|(?:[sS]tore[cC][dD][rR])|\
+        (?:[sS]tring)|(?:[sS]ubscribe[eE]vents)|(?:[sS]ub[sS]tring)|(?:[sS]ync)|\
+        (?:[sS]ystem[iI]nfo)|(?:[tT]ext[tT]o[oO]bject)|(?:[tT]his[tT]ask)|(?:[tT]ime[oO]f[dD]ay)|\
+        (?:[tT]o[lL]ower[cC]ase)|(?:[tT]o[oO]bject)|(?:[tT]o[uU]pper[cC]ase)|(?:[tT]ransfer[cC]all)|\
+        (?:[tT]ransfer[sS]upported)|(?:[uU]pdate[aA]ccount[mM]ail[rR]ule)|\
+        (?:[uU]pdate[aA]ccount[sS]ignal[rR]ule)|(?:[uU]pdate[mM]essage[aA]ttr)|\
+        (?:[vV]oid)|(?:[wW]eek[dD]ay)|(?:[wW]rite[sS]ite[fF]ile)|\
+        (?:[wW]rite[sS]torage[fF]ile)|(?:[wW]rite[sS]torage[fF]ile[aA]ttr)|\
+        (?:[xX][mM][lL][bB]ody)|(?:[xX][mM][lL][pP]refix)|(?:[xX][mM][lL][tT]o[aA]pp)|\
+        (?:[xX][mM][lL][tT]ype)|(?:[yY]ear)|(?:[yY]ear[dD]ay)|(?:[vV]ars\(\))|\
+        (?:[vV]ars\(\)\.execute[cC][lL][iI][rR]esult)|(?:[vV]ars\(\)\.[pP]arent)|\
+        (?:[vV]ars\(\)\.start[pP]arameter)|(?:[sS]ys[lL]og)|\
+        (?:[eE]xecute[cC][lL][iI]))\\b'
+    }
+    {
+        'name': 'string.quoted.double.antl'
+        'begin': '\"'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.string.begin.antlr'
+        'end': '\"'
+        'endCaptures':
+          '0':
+            'name': 'punctuation.definition.string.end.antlr'
+        'patterns': [
+          {
+            'match': '\\\\.'
+            'name': 'constant.character.escape.antlr'
+          }
+        ]
+    }
+]
