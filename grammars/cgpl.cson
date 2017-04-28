@@ -113,9 +113,9 @@
         (?:[vV]oid)|(?:[wW]eek[dD]ay)|(?:[wW]rite[sS]ite[fF]ile)|\
         (?:[wW]rite[sS]torage[fF]ile)|(?:[wW]rite[sS]torage[fF]ile[aA]ttr)|\
         (?:[xX][mM][lL][bB]ody)|(?:[xX][mM][lL][pP]refix)|(?:[xX][mM][lL][tT]o[aA]pp)|\
-        (?:[xX][mM][lL][tT]ype)|(?:[yY]ear)|(?:[yY]ear[dD]ay)|(?:[vV]ars\(\))|\
-        (?:[vV]ars\(\)\.execute[cC][lL][iI][rR]esult)|(?:[vV]ars\(\)\.[pP]arent)|\
-        (?:[vV]ars\(\)\.start[pP]arameter)|(?:[sS]ys[lL]og)|\
+        (?:[xX][mM][lL][tT]ype)|(?:[yY]ear)|(?:[yY]ear[dD]ay)|\
+        (?:[vV]ars\\(\\)\\.execute[cC][lL][iI][rR]esult)|(?:[vV]ars\\(\\)\\.[pP]arent)|\
+        (?:[vV]ars\\(\\)\\.start[pP]arameter)|(?:[vV]ars\\(\\))|(?:[sS]ys[lL]og)|\
         (?:[eE]xecute[cC][lL][iI]))\\b'
     }
     {
