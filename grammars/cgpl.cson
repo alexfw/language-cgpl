@@ -19,9 +19,9 @@
     }
     {
         'name': 'keyword.control.cgpl'
-        'match': '\\b(?:(?:and)|(?:elif)|(?:else)|(?:end)|(?:exitif)|
-            (?:external)|(?:false)|(?:forward)|(?:for)|(?:if)|(?:is)|(?:loop)|
-            (?:not)|(?:null)|(?:or)|(?:return)|(?:spawn)|(?:stop)|
+        'match': '\\b(?:(?:and)|(?:elif)|(?:else)|(?:end)|(?:exitif)|\
+            (?:external)|(?:false)|(?:forward)|(?:for)|(?:if)|(?:is)|(?:loop)|\
+            (?:not)|(?:null)|(?:or)|(?:return)|(?:spawn)|(?:stop)|\
             (?:then)|(?:true)|(?:while)|(?:xor)|(?:var)|(?:function)|(?:procedure)|(?:entry))\\b'
     }
     {
