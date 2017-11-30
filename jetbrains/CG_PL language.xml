@@ -1,0 +1,26 @@
+<!-- ~/Library/Preferences/Gogland1.0/filetypes -->
+<filetype binary="false" description="CG/PL language" name="CG/PL language">
+  <highlighting>
+    <options>
+      <option name="LINE_COMMENT" value="//" />
+      <option name="COMMENT_START" value="/*" />
+      <option name="COMMENT_END" value="*/" />
+      <option name="HEX_PREFIX" value="" />
+      <option name="NUM_POSTFIXES" value="" />
+      <option name="HAS_BRACES" value="true" />
+      <option name="HAS_BRACKETS" value="true" />
+      <option name="HAS_PARENS" value="true" />
+      <option name="HAS_STRING_ESCAPES" value="true" />
+    </options>
+    <keywords keywords="and;elif;else;end;entry;exitif;external;false;forward;function;if;is;loop;not;null;or;procedure;return;spawn;stop;then;true;while;xor" ignore_case="true" />
+    <keywords2 keywords="acceptbridge;acceptcall;accepttransfer;activatemeeting;addelement;appendsitefile;appendstoragefile;apptoxml;attachmixer;bannerread;base64decode;base64encode;breakbridge;cancelcall;checkqueue;cleardtmf;clearmeeting;convert;copy;createmeeting;createstoragedirectory;crlf;crydecrypt;crydigest;cryencrypt;datasetcreate;datasetdelete;datasetlist;datasetremove;datasetset;datebymonthday;datebyyearday;datenumber;deactivatemeeting;deletesitefile;deletestoragedirectory;deletestoragefile;dequeue;detachmixer;directorysearch;disconnect;dobalance;dtmf;emaildomainpart;emailtosipuri;emailuserpart;enqueue;eol;find;findmeeting;findregex;findsubstring;forkcall;funccall;getaccountpreferences;getattribute;getlanguage;getmailboxacls;getmailboxaliases;getmailboxsubscription;getmessageattr;getnamespace;getprefix;gettimezonename;gmttime;gmttolocal;httpcall;impersonate;incomingrequesturi;insertelement;invert;ipaddress;isarray;isbreakbridgeevent;iscallcompletedevent;iscallinfoevent;iscallprovisionevent;iscalltransferredevent;isconnected;isdata;isdate;isdictionary;isdigit;isdisconnectevent;ishalfconnected;isinstantmessageevent;isipaddress;ismailboxnotifyevent;isnumber;isstartbridgeevent;isstarttransferevent;isstring;iswhitespaces;isxml;isxmppiqevent;jsontoobject;length;listsitefiles;liststoragefiles;localtime;localtogmt;localuri;lockstoragefile;mailboxappend;mailboxaudiobyuid;mailboxcopy;mailboxexpunge;mailboxflagsbyuid;mailboxforwardbyuid;mailboxinternaltimebyuid;mailboxoriguidbyuid;mailboxredirectbyuid;mailboxsetflags;mailboxsetflagsbyuid;mailboxuidbyoriguid;mailboxuids;max;mediaoption;min;mixerattached;month;monthday;monthnum;mutemixer;mydomain;myemail;newarray;newdictionary;newxml;number;objectclass;objecttojson;objecttostring;objecttoxml;opencalendar;openmailbox;pendingrequestdata;pendingrequestexdata;phonenumbertosipuri;play;playfile;playfileinloop;playinloop;proccall;processcalendar;provisioncall;radiuscall;randomdata;randomnumber;range;readenvirfile;readgroupmembers;readinput;readqueue;readroster;readsitefile;readstoragefile;readstoragefileattr;readtelnums;record;redirectcall;rejectbridge;rejectcall;rejecttransfer;releasemediachannel;remoteauthentication;remoteipaddress;remoteuri;removeelement;removemeeting;renamesitefile;renamestoragedirectory;renamestoragefile;routeaddress;routeenum;routelocaluri;same;sendcallinfo;sendcallnotify;sendcalloptions;sendcallregister;senddtmf;sendemail;sendevent;sendinstantmessage;sendxmppiq;setaccountpreferences;setapplicationstatus;setattribute;setbridgebreakmode;setbridgedprovision;setcallparameters;setcasesensitive;setforeigncredentials;setinterruptondtmf;setlanguage;setlocalcontactparameter;setlocalhold;setmailboxacls;setmailboxaliases;setmailboxsubscription;setnamespace;setprovisioncode;setrefermode;setroster;settimezone;settransferreportmode;signaloption;sipuritoemail;sortstrings;startbridge;startbridgedcall;startcall;starttransfer;statistics;storecdr;string;subscribeevents;substring;sync;systeminfo;texttoobject;thistask;timeofday;tolowercase;toobject;touppercase;transfercall;transfersupported;updateaccountmailrule;updateaccountsignalrule;updatemessageattr;vars;void;weekday;writesitefile;writestoragefile;writestoragefileattr;xmlbody;xmlprefix;xmltoapp;xmltype;year;yearday" />
+    <keywords3 keywords="syslog" />
+    <keywords4 keywords="executecli;sysprofile" />
+  </highlighting>
+  <extensionMap>
+    <mapping ext="wcgi" />
+    <mapping ext="wcgp" />
+    <mapping ext="sppr" />
+    <mapping ext="sppi" />
+  </extensionMap>
+</filetype>

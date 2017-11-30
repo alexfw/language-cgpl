@@ -1,0 +1,226 @@
+# Hightlight file for CG/PL language of CGP
+# for plugin edit file ~/.mc/cedit/Syntax and add:
+# file ..\*\\.(sppi|sppr)$ CGPL\sFile
+# include cgpl.syntax
+#
+# file must be places at ~/.local/share/mc/mcedit
+#
+# author: Alexander Mukhin <amukhin@gmail.com>
+
+context default
+    keyword whole and yellow
+    keyword whole elif yellow
+    keyword whole end yellow
+    keyword whole else yellow
+    keyword whole entry yellow
+    keyword whole exitif yellow
+    keyword whole external yellow
+    keyword whole false yellow
+    keyword whole forward yellow
+    keyword whole function yellow
+    keyword whole if yellow
+    keyword whole is yellow
+    keyword whole not yellow
+    keyword whole loop yellow
+    keyword whole null yellow
+    keyword whole or yellow
+    keyword whole procedure yellow
+    keyword whole return yellow
+    keyword whole spawn yellow
+    keyword whole stop yellow
+    keyword whole then yellow
+    keyword whole true yellow
+    keyword whole xor yellow
+    keyword whole while yellow
+
+	keyword whole ReadInput cyan
+	keyword whole IsDisconnectEvent cyan
+	keyword whole RejectCall cyan
+	keyword whole AcceptCall cyan
+	keyword whole RedirectCall cyan
+	keyword whole ForkCall cyan
+	keyword whole ProvisionCall cyan
+	keyword whole SetProvisionCode cyan
+	keyword whole StartCall cyan
+	keyword whole IsCallProvisionEvent cyan
+	keyword whole IsCallCompletedEvent cyan
+	keyword whole CancelCall cyan
+	keyword whole Disconnect cyan
+	keyword whole IsConnected cyan
+	keyword whole IsHalfConnected cyan
+	keyword whole PendingRequestData cyan
+	keyword whole SetForeignCredentials cyan
+	keyword whole SetReferMode cyan
+	keyword whole SetTransferReportMode cyan
+	keyword whole IsCallTransferredEvent cyan
+	keyword whole SetBridgeBreakMode cyan
+	keyword whole RemoteURI cyan
+	keyword whole LocalURI cyan
+	keyword whole IncomingRequestURI cyan
+	keyword whole RouteLocalURI cyan
+	keyword whole RemoteIPAddress cyan
+	keyword whole RemoteAuthentication cyan
+	keyword whole DTMF cyan
+	keyword whole ClearDTMF cyan
+	keyword whole SetInterruptOnDTMF cyan
+	keyword whole SendDTMF cyan
+	keyword whole PlayFile cyan
+	keyword whole PlayFileInLoop cyan
+	keyword whole Play cyan
+	keyword whole PlayInLoop cyan
+	keyword whole Record cyan
+	keyword whole SetLocalHold cyan
+	keyword whole ReleaseMediaChannel cyan
+	keyword whole StartBridge cyan
+	keyword whole IsStartBridgeEvent cyan
+	keyword whole RejectBridge cyan
+	keyword whole AcceptBridge cyan
+	keyword whole BreakBridge cyan
+	keyword whole IsBreakBridgeEvent cyan
+	keyword whole AttachMixer cyan
+	keyword whole DetachMixer cyan
+	keyword whole MixerAttached cyan
+	keyword whole MuteMixer cyan
+	keyword whole StartBridgedCall cyan
+	keyword whole SetBridgedProvision cyan
+	keyword whole TransferSupported cyan
+	keyword whole TransferCall cyan
+	keyword whole StartTransfer cyan
+	keyword whole IsStartTransferEvent cyan
+	keyword whole RejectTransfer cyan
+	keyword whole AcceptTransfer cyan
+	keyword whole SendCallInfo cyan
+	keyword whole IsCallInfoEvent cyan
+	
+	keyword whole Same cyan
+	keyword whole Length cyan
+	keyword whole Void cyan
+	keyword whole IsString cyan
+	keyword whole String cyan
+	keyword whole FindSubstring cyan
+	keyword whole Substring cyan
+	keyword whole EOL cyan
+	keyword whole CRLF cyan
+	keyword whole ToUpperCase cyan
+	keyword whole ToLowerCase cyan
+	keyword whole FindRegEx cyan
+	keyword whole EmailDomainPart cyan
+	keyword whole EmailUserPart cyan
+	keyword whole IsNumber cyan
+	keyword whole Number cyan
+	keyword whole RandomNumber cyan
+	keyword whole IsDate cyan
+	keyword whole GMTTime cyan
+	keyword whole LocalTime cyan
+	keyword whole GMTToLocal cyan
+	keyword whole LocalToGMT cyan
+	keyword whole Year cyan
+	keyword whole Month cyan
+	keyword whole MonthNum cyan
+	keyword whole MonthDay cyan
+	keyword whole WeekDay cyan
+	keyword whole YearDay cyan
+	keyword whole TimeOfDay cyan
+	keyword whole DateNumber cyan
+	keyword whole DateByMonthDay cyan
+	keyword whole DateByYearDay cyan
+	keyword whole IsIPAddress cyan
+	keyword whole IPAddress cyan
+	keyword whole IsData cyan
+	keyword whole IsArray cyan
+	keyword whole NewArray cyan
+	keyword whole Invert cyan
+	keyword whole Find cyan
+	keyword whole RemoveElement cyan
+	keyword whole InsertElement cyan
+	keyword whole IsDictionary cyan
+	keyword whole NewDictionary cyan
+	keyword whole SetCaseSensitive cyan
+	keyword whole ObjectToString cyan
+	keyword whole TextToObject cyan
+	keyword whole Vars cyan
+	keyword whole SIPURIToEmail cyan
+	keyword whole EmailToSIPURI cyan
+	keyword whole PhoneNumberToSIPURI cyan
+	keyword whole RouteAddress cyan
+	keyword whole MyDomain cyan
+	keyword whole MyEmail cyan
+	keyword whole GetAccountPreferences cyan
+	keyword whole SetAccountPreferences cyan
+	keyword whole ReadSiteFile cyan
+	keyword whole WriteSiteFile cyan
+	keyword whole AppendSiteFile cyan
+	keyword whole DeleteSiteFile cyan
+	keyword whole RenameSiteFile cyan
+	keyword whole ListSiteFiles cyan
+	keyword whole Impersonate cyan
+	keyword whole ReadGroupMembers cyan
+	keyword whole ReadTelnums cyan
+	keyword whole UpdateAccountMailRule cyan
+	keyword whole UpdateAccountSignalRule cyan
+	keyword whole OpenMailbox cyan
+	keyword whole MailboxUIDs cyan
+	keyword whole MailboxInternalTimeByUID cyan
+	keyword whole MailboxFlagsByUID cyan
+	keyword whole MailboxSetFlagsByUID cyan
+	keyword whole MailboxExpunge cyan
+	keyword whole MailboxAudioByUID cyan
+	keyword whole MailboxRedirectByUID cyan
+	keyword whole MailboxForwardByUID cyan
+	keyword whole DirectorySearch cyan
+	keyword whole GetLanguage cyan
+	keyword whole SetLanguage cyan
+	keyword whole GetTimeZoneName cyan
+	keyword whole SetTimeZone cyan
+	keyword whole HTTPCall cyan
+	keyword whole SendEMail cyan
+	keyword whole SendInstantMessage cyan
+	keyword whole RADIUSCall cyan
+	keyword whole SendEvent cyan
+	keyword whole ReadInput cyan
+	keyword whole CreateMeeting cyan
+	keyword whole ActivateMeeting cyan
+	keyword whole DeactivateMeeting cyan
+	keyword whole RemoveMeeting cyan
+	keyword whole FindMeeting cyan
+	keyword whole ClearMeeting cyan
+	keyword whole Enqueue cyan
+	keyword whole CheckQueue cyan
+	keyword whole Dequeue cyan
+	keyword whole ReadQueue cyan
+
+	keyword whole RemoteRedirector red
+
+	keyword whole SysLog magenta
+
+    keyword // brown
+
+    keyword '\s' brightgreen
+    keyword '+' brightgreen
+    keyword > yellow
+    keyword < yellow
+    keyword \+ yellow
+    keyword - yellow
+    keyword \* yellow
+    keyword / yellow
+    keyword % yellow
+    keyword = yellow
+    keyword != yellow
+    keyword == yellow
+    keyword { brightcyan
+    keyword } brightcyan
+    keyword ( brightcyan
+    keyword ) brightcyan
+    keyword [ brightcyan
+    keyword ] brightcyan
+    keyword , brightcyan
+    keyword : brightcyan
+    keyword ? brightcyan
+    keyword ; brightmagenta
+context exclusive // \n brown
+    spellcheck
+context " " green
+    spellcheck
+    keyword \\" brightgreen
+    keyword \\n brightgreen
+    keyword \\\{abtnvfr\} brightgreen
