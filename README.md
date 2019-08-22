@@ -12,4 +12,4 @@ __Aleksandr Mukhin__
 
 License
 ------
-Atom language-lua is released under the MIT license.
+MIT license.
